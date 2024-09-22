@@ -177,9 +177,7 @@ fun ActividadPrincipal(navController: NavController, backgroundColor: Color) {
 @Composable
 fun PantallaConfiguracion(navController: NavHostController, color: Color, onColorChanged: (Color) -> Unit ) {
 
-
     var colorFondo by remember {mutableStateOf(color) }
-
 
     Column(
         modifier = Modifier
@@ -197,24 +195,19 @@ fun PantallaConfiguracion(navController: NavHostController, color: Color, onColo
         ColorSelection(onColorSelected = {colorFondo = it
             onColorChanged(it)})
 
+        Button(onClick = { navController.navigate("pantallaInicio") },
+            modifier = Modifier.clip(RoundedCornerShape(16.dp)),
+            colors = ButtonDefaults.buttonColors(containerColor = purpleDark)) {
+            Text("Volver a la pantalla de inicio")
 
+        }
 
-    }
-
-
-
-    Button(onClick = { navController.navigate("pantallaInicio") },
-        modifier = Modifier.clip(RoundedCornerShape(16.dp)),
-        colors = ButtonDefaults.buttonColors(containerColor = purpleDark))  {
-        Text("Volver a la pantalla de inicio")
     }
 }
 
 
 @Composable
 fun ColorSelection(onColorSelected: (Color) -> Unit) {
-
-
 
     val colors = listOf(
         Color.Red, Color.Green, Color.Blue,
@@ -244,7 +237,6 @@ fun ColorButton(color: Color, onColorSelected: (Color) -> Unit) {
         modifier = Modifier.size(50.dp),
         colors = ButtonDefaults.buttonColors(containerColor = color)
     ) {
-
     }
 }
 
