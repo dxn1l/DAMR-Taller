@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.damr_taller"
+    namespace = "com.example.damr_taller1"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.damr_taller"
+        applicationId = "com.example.damr_taller1"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

@@ -1,4 +1,4 @@
-package com.example.damr_taller1
+package com.example.damr_taller
 
 import android.icu.util.Calendar
 import android.os.Bundle
@@ -8,9 +8,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -42,7 +40,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.damr_taller1.ui.theme.DAMRTaller1Theme
+import com.example.damr_taller.ui.theme.DAMRTaller1Theme
 
 
 class PantallaInicio : ComponentActivity() {

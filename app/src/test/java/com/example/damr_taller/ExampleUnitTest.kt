@@ -1,4 +1,4 @@
-package com.example.damr_taller1
+package com.example.damr_taller
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.example.damr_taller1
+package com.example.damr_taller
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

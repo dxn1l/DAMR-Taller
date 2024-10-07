@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "DAMR-Taller1"
+rootProject.name = "DAMR-Taller"
 include(":app")

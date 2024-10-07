@@ -1,4 +1,4 @@
-package com.example.damr_taller1.ui.theme
+package com.example.damr_taller.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
