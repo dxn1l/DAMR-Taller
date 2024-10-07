@@ -9,9 +9,9 @@ import androidx.compose.runtime.setValue
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.damr_taller.ActividadPrincipal
-import com.example.damr_taller.PantallaConfiguracion
-import com.example.damr_taller.PantallaInicio
+import com.example.damr_taller.Screens.ActividadPrincipal
+import com.example.damr_taller.Screens.PantallaConfiguracion
+import com.example.damr_taller.Screens.PantallaInicio
 
 @Composable
 fun AppNavigation(startDestination: String = "pantallaInicio") {

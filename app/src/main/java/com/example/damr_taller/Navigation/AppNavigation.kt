@@ -1,5 +1,6 @@
 package com.example.damr_taller.Navigation
 
+import ActividadPrincipal
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -9,7 +10,6 @@ import androidx.compose.runtime.setValue
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.damr_taller.Screens.ActividadPrincipal
 import com.example.damr_taller.Screens.PantallaConfiguracion
 import com.example.damr_taller.Screens.PantallaInicio
 
