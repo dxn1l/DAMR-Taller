@@ -103,7 +103,7 @@ fun ActividadPrincipal(navController: NavController, backgroundColor: Color) {
             LinearProgressIndicator(
                 progress = progreso,
                 modifier = Modifier
-                    .padding(8.dp)
+                    .padding(16.dp)
                     .fillMaxSize(0.3f)
             )
         }
