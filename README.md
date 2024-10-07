@@ -14,6 +14,8 @@ Este proyecto de Android, desarrollado con Kotlin y Jetpack Compose, ofrece una 
 * Permite al usuario ingresar su nombre en un campo de texto y este se muestra en un TextView.
 * Dispone de un botón para guardar el nombre ingresado.
 * Ofrece un botón para navegar a la Pantalla de Configuración.
+* Incorpora una funcionalidad para simular una operación en segundo plano que muestra un progreso mediante un CircularProgressIndicator y un porcentaje en pantalla.
+* Muestra un Snackbar al finalizar la operación en segundo plano.
 
 **3. Pantalla de Configuración:**
 
@@ -37,5 +39,5 @@ Para ejecutar este proyecto, sigue estos pasos:
 ## Uso
 
 1. **Pantalla de Inicio:** Observa el saludo personalizado y presiona el botón para ir a la Actividad Principal.
-2. **Actividad Principal:** Ingresa tu nombre en el campo de texto y presiona "Guardar". Tu nombre se mostrará en pantalla. Presiona el botón para ir a la Pantalla de Configuración.
+2. **Actividad Principal:** Ingresa tu nombre en el campo de texto y presiona "Guardar". Tu nombre se mostrará en pantalla. Presiona el botón para ir a la Pantalla de Configuración. Puedes iniciar una tarea en segundo plano, que mostrará un progreso animado y un mensaje al finalizar. Presiona el botón para ir a la Pantalla de Configuración.
 3. **Pantalla de Configuración:** Selecciona un color de fondo y presiona el botón para volver a la Pantalla de Inicio.
