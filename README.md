@@ -2,6 +2,10 @@
 
 Este proyecto de Android, desarrollado con Kotlin y Jetpack Compose, ofrece una interfaz de usuario interactiva con tres pantallas : 'Pantalla de Inicio' , 'Actividad Principal' y 'Pantalla de Configuración'
 
+## Link al repositorio
+
+* https://github.com/dxn1l/DAMR-Taller
+
 ## Características
 
 **1. Pantalla de Inicio:**
