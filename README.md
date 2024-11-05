@@ -29,7 +29,7 @@ Este proyecto de Android, desarrollado con Kotlin y Jetpack Compose, ofrece una 
 
 * Brinda opciones para personalizar el color de fondo de la aplicación , se ofrece un total de 9 colores.
 * Incluye un botón para volver a la Pantalla de Inicio.
-* El collar seleccionado se guarda en SharedPreferences.
+* El color seleccionado se guarda en SharedPreferences.
 
 ## Tecnologías utilizadas
 
