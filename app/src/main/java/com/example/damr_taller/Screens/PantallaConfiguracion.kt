@@ -1,6 +1,9 @@
 package com.example.damr_taller.Screens
 
+import android.content.Context
+import android.content.SharedPreferences
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -22,6 +25,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
@@ -33,6 +38,7 @@ import com.example.damr_taller.ui.theme.purpleDark
 @Composable
 fun PantallaConfiguracion(navController: NavHostController, color: Color, onColorChanged: (Color) -> Unit ) {
 
+    val context = LocalContext.current
     var colorFondo by remember { mutableStateOf(color) }
 
     Column(
@@ -48,17 +54,34 @@ fun PantallaConfiguracion(navController: NavHostController, color: Color, onColo
 
 
 
-        ColorSelection(onColorSelected = {colorFondo = it
-            onColorChanged(it)})
+        ColorSelection(onColorSelected = { selectedColor ->
+            colorFondo = selectedColor
+            onColorChanged(selectedColor)
+            saveBackgroundColor(context, selectedColor)
+        })
 
         Button(onClick = { navController.navigate("pantallaInicio") },
-            modifier = Modifier.clip(RoundedCornerShape(16.dp)),
-            colors = ButtonDefaults.buttonColors(containerColor = purpleDark)) {
+            modifier = Modifier.clip(RoundedCornerShape(16.dp))
+                .border(2.dp, Color.Black, RoundedCornerShape(16.dp)),
+            colors = ButtonDefaults.buttonColors(containerColor = Color.Gray , contentColor = Color.Black)) {
             Text("Volver a la pantalla de inicio")
 
         }
 
     }
+}
+
+fun saveBackgroundColor(context: Context, color: Color) {
+    val sharedPreferences: SharedPreferences = context.getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+    val editor = sharedPreferences.edit()
+    editor.putInt("backgroundColor", color.toArgb())
+    editor.apply()
+}
+
+fun getBackgroundColor(context: Context): Color {
+    val sharedPreferences: SharedPreferences = context.getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+    val colorInt = sharedPreferences.getInt("backgroundColor", Color.White.toArgb())
+    return Color(colorInt)
 }
 
 
@@ -100,6 +123,8 @@ fun ColorButton(color: Color, onColorSelected: (Color) -> Unit) {
 fun textColor(backgroundColor: Color): Color {
     return if (backgroundColor == Color.Black) Color.White else Color.Black
 }
+
+
 
 
 
