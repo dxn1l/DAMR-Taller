@@ -2,6 +2,7 @@ package com.example.damr_taller.Screens
 
 import android.icu.util.Calendar
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -25,7 +26,6 @@ import com.example.damr_taller.ui.theme.purpleDark
 @Composable
 fun PantallaInicio(navController: NavHostController, backgroundColor: Color){
 
-    val context = LocalContext.current
     val currentHour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY)
     val saludo = when (currentHour) {
         in 0..11 -> "Buenos días"
@@ -48,8 +48,9 @@ fun PantallaInicio(navController: NavHostController, backgroundColor: Color){
             color = textColor(backgroundColor)
         )
         Button(onClick = { navController.navigate("mainActivity") },
-            modifier = Modifier.clip(RoundedCornerShape(16.dp)),
-            colors = ButtonDefaults.buttonColors(containerColor = purpleDark)
+            modifier = Modifier.clip(RoundedCornerShape(16.dp))
+                .border(2.dp, Color.Black, RoundedCornerShape(16.dp)),
+            colors = ButtonDefaults.buttonColors(containerColor = Color.Gray , contentColor = Color.Black)
         )
         {
             Text("Entrar")
